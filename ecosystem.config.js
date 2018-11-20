@@ -26,7 +26,7 @@ module.exports = {
       'pre-setup': "yum install git -y;",
       'post-setup': "ls -la",
       'pre-deploy-local': "pwd; echo 'this is a local command' ",
-      'pre-deploy': 'git pull origin master; git log --pretty=format:"%h %s %ad" -n 2 --graph;',
+      'pre-deploy': "git pull origin master; git log --pretty=format:'%h %s %ad' -n 2 --graph;",
       'post-deploy': 'npm run start_production;',
       'test': 'pm2 ls;'
     }
