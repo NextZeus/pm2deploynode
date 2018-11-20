@@ -18,10 +18,12 @@ module.exports = {
   }],
   deploy: {
     production: {
-      user: 'node',
-      host: '212.83.163.1',
+      user: 'root',
+      host: '47.104.216.30',
       ref: 'origin/master',
-      repo: 'git@github.com:repo.git',
+      repo: 'https://github.com/NextZeus/jwt.git',
+      'pre-setup': "yum install git -y; ls -la",
+      'post-setup': "ls -la",
       path: '/var/www/production',
       'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production'
     }
