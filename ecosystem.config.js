@@ -25,7 +25,7 @@ module.exports = {
       'path': '/var/www/production',
       'pre-setup': "yum install git -y;",
       'post-setup': "ls -la",
-      'pre-deploy-local': 'git pull origin master;',
+      'pre-deploy-local': 'pwd;',
       'pre-deploy': 'ls -la;',
       'post-deploy': 'git pull origin master;npm run start_production;',
       'test': 'pm2 ls;'
