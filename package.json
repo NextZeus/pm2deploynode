@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "setup": "pm2 deploy production setup",
+    "deploy": "pm2 deploy production deploy",
     "start_production": "npm install && pm2 reload ecosystem.config.js --env production"
   },
   "dependencies": {
