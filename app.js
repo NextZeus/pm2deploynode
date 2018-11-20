@@ -45,7 +45,7 @@ const secret = 'xiaodong';
 //   path: ['/']
 // }));
 
-console.log('app start');
+console.log('app start', Date.now());
 
 
 app.use('/', indexRouter);
