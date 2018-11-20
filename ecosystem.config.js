@@ -3,7 +3,7 @@ module.exports = {
     name: 'API',
     script: 'bin/www',
     args: '',
-    mode: 'cluster',
+    exec_mode: 'cluster',
     instances: 0,
     autorestart: true,
     watch: false,
@@ -18,14 +18,14 @@ module.exports = {
   }],
   deploy: {
     production: {
-      user: 'root',
-      host: '47.104.216.30',
-      ref: 'origin/master',
-      repo: 'https://github.com/NextZeus/jwt.git',
-      'pre-setup': "yum install git -y; ls -la",
+      'user': 'root',
+      'host': '47.104.216.30',
+      'ref': 'origin/master',
+      'repo': 'https://github.com/NextZeus/jwt.git',
+      'pre-setup': "yum install git -y;",
       'post-setup': "ls -la",
-      path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production'
+      'path': '/var/www/production',
+      'post-deploy': 'npm run start_production'
     }
   }
 };
