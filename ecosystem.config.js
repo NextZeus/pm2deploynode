@@ -22,9 +22,10 @@ module.exports = {
       'host': '47.104.216.30',
       'ref': 'origin/master',
       'repo': 'https://github.com/NextZeus/jwt.git',
+      'path': '/var/www/production',
       'pre-setup': "yum install git -y;",
       'post-setup': "ls -la",
-      'path': '/var/www/production',
+      'pre-deploy-local': 'git pull;',
       'post-deploy': 'npm run start_production'
     }
   }
