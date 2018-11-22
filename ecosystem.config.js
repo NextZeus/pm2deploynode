@@ -1,6 +1,6 @@
 module.exports = {
   apps: [{
-    name: 'API',
+    name: 'API-Dev',
     script: 'bin/www',
     args: '',
     exec_mode: 'cluster',
@@ -9,7 +9,8 @@ module.exports = {
     watch: false,
     max_memory_restart: '1G',
     env: {
-      NODE_ENV: 'development'
+      NODE_ENV: 'development',
+      PORT: 3000
     },
     env_production: {
       NODE_ENV: 'production',
@@ -21,7 +22,7 @@ module.exports = {
       'user': 'root',
       'host': '47.104.216.30',
       'ref': 'origin/master',
-      'repo': 'https://github.com/NextZeus/jwt.git',
+      'repo': 'https://github.com/NextZeus/pm2deploynode.git',
       'path': '/var/www/production',
       'pre-setup': "yum install git -y;",
       'post-setup': "ls -la",

@@ -1,5 +1,5 @@
 {
-  "name": "jwt",
+  "name": "pm2deploynode",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -25,15 +25,15 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NextZeus/jwt.git"
+    "url": "git+https://github.com/NextZeus/pm2deploynode.git"
   },
   "keywords": [
-    "jwt"
+    "pm2deploynode"
   ],
   "author": "xiaodong.li",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NextZeus/jwt/issues"
+    "url": "https://github.com/NextZeus/pm2deploynode/issues"
   },
-  "homepage": "https://github.com/NextZeus/jwt#readme"
+  "homepage": "https://github.com/NextZeus/pm2deploynode#readme"
 }
